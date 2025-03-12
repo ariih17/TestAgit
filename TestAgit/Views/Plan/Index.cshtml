@@ -1,0 +1,79 @@
+﻿@model Plan
+
+@* @{
+    ViewData["Title"] = "Rencana Produksi Mobil";
+} *@
+
+<h2>Planning gw</h2>
+
+<form method="post" asp-action="AdjustPlan">
+    <div class="row">
+        <div class="col-2">
+            <label for="Senin">Senin</label>
+            <input type="number" id="Senin" name="Senin" required />
+        </div>
+        <div class="col-2">
+            <label for="Selasa">Selasa</label>
+            <input type="number" id="Selasa" name="Selasa" required />
+        </div>
+        <div class="col-2">
+            <label for="Rabu">Rabu</label>
+            <input type="number" id="Rabu" name="Rabu"  required />
+        </div>
+        <div class="col-2">
+            <label for="Kamis">Kamis</label>
+            <input type="number" id="Kamis" name="Kamis"  required />
+        </div>
+        <div class="col-2">
+            <label for="Jumat">Jumat</label>
+            <input type="number" id="Jumat" name="Jumat"  required />
+        </div>
+        <div class="col-2">
+            <label for="Sabtu">Sabtu</label>
+            <input type="number" id="Sabtu" name="Sabtu" required />
+        </div>
+        <div class="col-2">
+            <label for="Friday">Minggu</label>
+            <input type="number" id="Minggu" name="Minggu" required />
+        </div>
+    </div>
+    <button type="submit">Proses</button>
+</form>
+
+<div class="row">
+
+</div>
+@if (Model.Total != 0)
+{
+    <h3>Mintanya si bos jadi kayak gini </h3>
+    <div class="row">
+        <div class="col-2">
+            <label for="Senin">Senin</label>
+            <input type="number" id="Senin" name="Senin" value="@Model.Senin" />
+        </div>
+        <div class="col-2">
+            <label for="Selasa">Selasa</label>
+            <input type="number" id="Selasa" name="Selasa" value="@Model.Selasa" />
+        </div>
+        <div class="col-2">
+            <label for="Rabu">Rabu</label>
+            <input type="number" id="Rabu" name="Rabu" value="@Model.Rabu" />
+        </div>
+        <div class="col-2">
+            <label for="Kamis">Kamis</label>
+            <input type="number" id="Kamis" name="Kamis" value="@Model.Kamis" />
+        </div>
+        <div class="col-2">
+            <label for="Jumat">Jumat</label>
+            <input type="number" id="Jumat" name="Jumat" value="@Model.Jumat" />
+        </div>
+        <div class="col-2">
+            <label for="Sabtu">Sabtu</label>
+            <input type="number" id="Sabtu" name="Sabtu" value="@Model.Sabtu" />
+        </div>
+        <div class="col-2">
+            <label for="Friday">Minggu</label>
+            <input type="number" id="Minggu" name="Minggu" value="@Model.Minggu" />
+        </div>
+    </div>
+}
